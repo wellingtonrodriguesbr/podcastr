@@ -35,6 +35,7 @@
 
 body {
   background: var(--gray-50);
+  overflow-y: hidden;
 }
 
 body,
@@ -66,4 +67,8 @@ h2 {
 
 button {
   cursor: pointer;
+}
+
+ul {
+  list-style: none;
 }
