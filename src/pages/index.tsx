@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { PlayerContext } from "../contexts/PlayerContext";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,6 +30,8 @@ type HomeProps = {
 };
 
 export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
+  const { play } = useContext(PlayerContext);
+
   return (
     <>
       <Head>
@@ -42,8 +46,8 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
               return (
                 <li key={episode.id}>
                   <Image
-                    width={192}
-                    height={192}
+                    width={120}
+                    height={120}
                     src={episode.thumbnail}
                     alt={episode.title}
                     objectFit="cover"
@@ -58,7 +62,7 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                     <span>{episode.durationAsString}</span>
                   </div>
 
-                  <button type="button">
+                  <button type="button" onClick={() => play(episode)}>
                     <img src="/play-green.svg" alt="play episode" />
                   </button>
                 </li>
