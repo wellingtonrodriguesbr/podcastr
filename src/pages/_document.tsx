@@ -12,9 +12,18 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter&family=Lexend:wght@500;600&display=swap"
             rel="stylesheet"
           />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta property="og:title" content="Podcastr" />
+          <meta property="og:type" content="article" />
+          <meta property="og:image" content="/Home.jpg" />
+          <meta
+            property="og:description"
+            content="Podcastr | O melhor para você ouvir, sempre."
+          />
+          <meta property="og:site_name" content="European Travel, Inc." />
           <meta
             name="description"
-            content="Podcastr | O melhor para você outvir, sempre."
+            content="Podcastr | O melhor para você ouvir, sempre."
           />
         </Head>
         <body>

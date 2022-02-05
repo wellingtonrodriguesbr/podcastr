@@ -1,3 +1,4 @@
+import { usePlayer } from "../../contexts/PlayerContext";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,9 +7,9 @@ import Head from "next/head";
 import format from "date-fns/format";
 import parseISO from "date-fns/parseISO";
 import ptBR from "date-fns/locale/pt-BR";
-
 import { api } from "../../services/api";
 import { convertDurationTime } from "../../utils/convertDurationTime";
+
 import styles from "./episode.module.scss";
 
 type Episode = {
@@ -28,6 +29,7 @@ type EpisodeProps = {
 };
 
 export default function Episode({ episode }: EpisodeProps) {
+  const { play } = usePlayer();
   return (
     <>
       <Head>
@@ -47,7 +49,7 @@ export default function Episode({ episode }: EpisodeProps) {
             src={episode.thumbnail}
             objectFit="cover"
           />
-          <button>
+          <button onClick={() => play(episode)}>
             <img src="/play.svg" alt="play episode" />
           </button>
         </div>
