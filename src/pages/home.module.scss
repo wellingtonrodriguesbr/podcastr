@@ -1,6 +1,7 @@
 .homepage {
   padding: 0 4rem;
   height: calc(100vh - 6.5rem);
+  width: calc(100vw - 26.5rem);
   overflow-y: scroll;
 
   h2 {
@@ -10,8 +11,8 @@
 
   .latestEpisodes {
     ul {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      justify-content: center;
       gap: 1rem;
 
       li {
@@ -22,12 +23,11 @@
         position: relative;
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         gap: 1rem;
 
         img {
           border-radius: 1rem;
-          width: 4rem;
-          height: 4rem;
         }
 
         .episodesDetails {
@@ -98,10 +98,6 @@
             background: var(--gray-100);
           }
         }
-      }
-
-      @media (max-width: 968px) {
-        grid-template-columns: 1fr;
       }
     }
   }
