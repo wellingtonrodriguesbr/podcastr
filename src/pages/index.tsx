@@ -45,8 +45,8 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
               return (
                 <li key={episode.id}>
                   <Image
-                    width={120}
-                    height={120}
+                    width={100}
+                    height={100}
                     src={episode.thumbnail}
                     alt={episode.title}
                     objectFit="cover"

@@ -1,9 +1,7 @@
-.container {
+.wrapper {
   display: flex;
-  justify-content: center;
-  overflow-x: hidden;
-}
 
-.player {
-  width: 100%;
+  main {
+    flex: 1;
+  }
 }

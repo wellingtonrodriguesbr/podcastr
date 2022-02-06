@@ -7,17 +7,15 @@ import styles from "../styles/app.module.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className={styles.container}>
-      <PlayerProvider>
-        <main className={styles.wrapper}>
+    <PlayerProvider>
+      <div className={styles.wrapper}>
+        <main>
           <Header />
           <Component {...pageProps} />;
         </main>
-        <article className={styles.player}>
-          <Player />
-        </article>
-      </PlayerProvider>
-    </div>
+        <Player />
+      </div>
+    </PlayerProvider>
   );
 }
 
