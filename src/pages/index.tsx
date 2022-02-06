@@ -34,6 +34,7 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
   return (
     <>
       <Head>
+        <link rel="shortcut icon" href="favicon.png" type="image/png" />
         <title>Podcastr | Home</title>
       </Head>
 
