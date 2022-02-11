@@ -20,7 +20,6 @@ export default class MyDocument extends Document {
             property="og:description"
             content="Podcastr | O melhor para você ouvir, sempre."
           />
-          <meta property="og:site_name" content="European Travel, Inc." />
           <meta
             name="description"
             content="Podcastr | O melhor para você ouvir, sempre."
