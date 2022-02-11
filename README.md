@@ -3,7 +3,7 @@
 </h1>
 
 <h1 align="center">
-    <img src="./public/Capa.png">
+    <img src="./public/podcastr.gif">
 </h1>
 
 # Sobre o projeto
